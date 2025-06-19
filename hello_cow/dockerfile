@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+
+RUN apt-get update -y && apt-get upgrade -y && apt-get install cowsay -y
+
+ENV PATH=$PATH:/usr/games
+
+CMD ["cowsay", "Container Ran Successfully!"]
